@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <title>Shannon Game: Measuring the Entropy of English</title>
+  <meta name="description" content="Claude Shannon's 1951 guessing game measures the entropy of printed English: how predictable each next letter is. Play it, get your own estimate in bits per letter, and compare it with his.">
+  <link rel="canonical" href="https://rahman-tawhid.github.io/shannon-game/">
+  <meta name="theme-color" content="#10151d">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Shannon Game">
+  <meta property="og:title" content="Shannon Game: Measuring the Entropy of English">
+  <meta property="og:description" content="In 1951 Claude Shannon measured the entropy of English by having people guess a hidden text one letter at a time. Play his game and see how many bits each letter carries.">
+  <meta property="og:url" content="https://rahman-tawhid.github.io/shannon-game/">
+  <meta property="og:image" content="https://rahman-tawhid.github.io/shannon-game/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The opening screen: the question in large type beside rows of small dots, with a Start button.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="apple-mobile-web-app-title" content="Shannon Game">
+  <script type="module" crossorigin src="./assets/index-DBtEj7f1.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Dl0eUKJ-.css">
+</head>
+<body>
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader-inner">
+      <div class="loader-ring"><span></span></div>
+      <p class="loader-title">How much of what you read do you already know?</p>
+      <p class="loader-status" id="loader-status">Counting letters…</p>
+    </div>
+  </div>
+  <div id="app" hidden>
+    <header id="topbar">
+      <h1 id="title"><a href="#r=0">Shannon Game</a></h1>
+      <p id="chapter-title" aria-hidden="true"></p>
+      <button type="button" class="icon-btn" id="sources-btn" aria-haspopup="dialog">Sources</button>
+    </header>
+    <main id="main">
+      <article id="flow" aria-labelledby="screen-title"></article>
+    </main>
+    <div id="stage-holder" hidden>
+      <div id="stage">
+        <canvas id="axis" role="img" aria-label=""></canvas>
+        <div id="overlay"></div>
+      </div>
+    </div>
+    <footer id="foot">
+      <button type="button" class="t-btn" id="prev">Back</button>
+      <span id="progress" data-nonfigure></span>
+      <span id="progress-track" aria-hidden="true"></span>
+      <div id="contents-wrap">
+        <button type="button" class="t-btn" id="contents-btn" aria-haspopup="true" aria-expanded="false" aria-controls="contents">Contents</button>
+        <nav id="contents" aria-label="Contents" hidden><ol id="contents-list"></ol></nav>
+      </div>
+    </footer>
+    <div id="live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <div class="tooltip" id="tip" role="tooltip" hidden></div>
+    <dialog class="dialog" id="sources" aria-labelledby="sources-h"></dialog>
+  </div>
+</body>
+</html>
